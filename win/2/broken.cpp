@@ -23,12 +23,26 @@ void space(){
 	a=new (long long);
 	(*a)=rand();
 }
+void keyboard(){
+	srand(clock());
+	char key[]="`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?";
+	int mx=strlen(key);
+	char ch=key[rand()%mx];
+	keybd_event(ch, (BYTE) 0, 0, 0);
+	keybd_event(ch, (BYTE)0, KEYEVENTF_KEYUP, 0);
+}
+void mouse(){
+	mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+	mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+}
+
 
 int main(){
 	while(1){
 		color();
 		print();
 		move();
+		mouse();
 		space();
 		Sleep(1);
 	}

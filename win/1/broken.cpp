@@ -13,8 +13,8 @@ int main(){
 		mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
 		mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 		keybd_event(VK_CONTROL, (BYTE) 0, 0, 0);
-		keybd_event('E', (BYTE) 0, 0, 0);
-		keybd_event('E', (BYTE)0, KEYEVENTF_KEYUP, 0);
+		keybd_event('N', (BYTE) 0, 0, 0);
+		keybd_event('N', (BYTE)0, KEYEVENTF_KEYUP, 0);
     	keybd_event(VK_CONTROL, (BYTE)0, KEYEVENTF_KEYUP, 0);
 		SetCursorPos(rand()%2000,rand()%2000);
 		char command[1000];
